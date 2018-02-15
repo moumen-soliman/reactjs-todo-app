@@ -4,8 +4,8 @@ class Header extends Component {
     render() {
       return (
         <div>
-          <h1>ToDo</h1>
-          <h2>Put your life in the hands of a computer</h2>
+          <h1>{this.props.title}</h1>
+          <h2>{this.props.subtitle}</h2>
         </div>
       )
       
