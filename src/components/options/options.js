@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Option from '../options/option.js'
+import Option from './option.js'
 
 class Options extends Component {
     handleRemoveAll() {

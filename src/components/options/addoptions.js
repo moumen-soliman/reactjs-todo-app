@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Option from '../options/option.js'
 
 class AddOptions extends Component {
     handleAddOption(e) {

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 //Components
 import Header from './components/main/header.js'
 import Action from './components/actions/action.js'
-import Option from './components/options/option.js'
+// import Option from './components/options/option.js'
 import Options from './components/options/options.js'
 import AddOptions from './components/options/addoptions.js'
 
