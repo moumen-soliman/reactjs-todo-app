@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 
 class Action extends Component {
+    handlePick() {
+        alert('handlePick');
+    }
     render() {
       return (
         <div>
-          <button>What Should I do?</button>
+          <button onClick={this.handlePick}>What Should I do?</button>
         </div>
       );
     }
