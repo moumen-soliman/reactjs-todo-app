@@ -6,6 +6,7 @@ import './App.css';
 import Header from './components/main/header.js'
 import Action from './components/actions/action.js'
 import Options from './components/options/options.js'
+import AddOptions from './components/options/addoptions.js'
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         <Header />
         <Action />
         <Options />
+        <AddOptions />
       </div>
     );
   }
