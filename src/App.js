@@ -8,6 +8,7 @@ import Action from './components/actions/action.js'
 // import Option from './components/options/option.js'
 import Options from './components/options/options.js'
 import AddOptions from './components/options/addoptions.js'
+import VisibilityToggle from './components/main/visibilitytoggle.js'
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
         <Options option={option}/>
         <AddOptions />
         <Counter />
+        <VisibilityToggle />
       </div>
     );
   }
