@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Header extends Component {
-    render() {
+  render() {
       return (
         <div>
           <h1>{this.props.title}</h1>
@@ -12,5 +12,9 @@ class Header extends Component {
     }
 }
 
-export default Header;
-  
+Header.defaultProps = {
+  title: 'To Do Application by ReactJS',
+  subtitle: 'Here subtitle for ToDo Application'
+}
+
+export default Header

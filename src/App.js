@@ -22,11 +22,7 @@ class App extends Component {
   }
 
   handleDeleteOptions() {
-    this.setState(() => {
-      return {
-        options: [] 
-      };
-    });
+    this.setState(() => ({ options: [] }))
   }
 
   handlePick() {
@@ -41,18 +37,12 @@ class App extends Component {
       return 'This option already exist';
     }
 
-    this.setState((prevState) => {
-      return {
-        options: prevState.options.concat([option])
-      };
-    });
+    this.setState((prevState) => ({ options: prevState.options.concat([option]) }))
   }
   render() {
-    const title = 'To Do';
-    const subtitle = 'Put your life in the hands of a computer';
     return (
       <div className="container">
-        <Header title={title} subtitle={subtitle}/>
+        <Header />
         <Action 
           hasOptions={this.state.options.length > 0} 
           handlePick={this.handlePick}
