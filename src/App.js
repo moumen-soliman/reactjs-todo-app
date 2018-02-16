@@ -21,21 +21,41 @@ class App extends Component {
       options: []
     };
   }
+  componentDidMount() {
+    try {
+      const json = localStorage.getItem('options');
+      const options = JSON.parse(json);
+  
+      if (options) {
+        this.setState(() => ({ options }));
+      }  
+    } catch (e) {
+      console.log('this error')
+    }
 
-  handleDeleteOptions() {
-    this.setState(() => ({ options: [] }))
   }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.options.length !== this.state.options.length) {
+      //saving data into localstorage every time changed
+      const json = JSON.stringify(this.state.options);
+      localStorage.setItem('options', json);
+    }
+  }
+  componentWillUnmount() {
 
+  }
+  handleDeleteOptions() {
+    this.setState(() => ({ options: [] }));
+  }
   handleDeleteOption(optionToRemove) {
     this.setState((prevState) => ({
       options: prevState.options.filter((option) => optionToRemove !== option)
     }));
   }
-
   handlePick() {
     const randomNum = Math.floor(Math.random() * this.state.options.length);
     const option = this.state.options[randomNum];
-    alert(option)
+    alert(option);
   }
   handleAddOption(option) {
     if (!option) {
@@ -50,18 +70,26 @@ class App extends Component {
     return (
       <div className="container">
         <Header />
-        <Action 
-          hasOptions={this.state.options.length > 0} 
-          handlePick={this.handlePick}
-        />
-        <Options 
-          options={this.state.options}
-          handleDeleteOptions={this.handleDeleteOptions}
-          handleDeleteOption={this.handleDeleteOption}
-        />
-        <AddOption 
-          handleAddOption={this.handleAddOption}
-        />
+        <div>
+          <h5>Storage Items:</h5>
+        {
+          localStorage.getItem('options')
+        }
+        </div>
+        <div>
+          <Action 
+            hasOptions={this.state.options.length > 0} 
+            handlePick={this.handlePick}
+          />
+          <Options 
+            options={this.state.options}
+            handleDeleteOptions={this.handleDeleteOptions}
+            handleDeleteOption={this.handleDeleteOption}
+          />
+          <AddOption 
+            handleAddOption={this.handleAddOption}
+          />
+        </div>
         {/* <Counter />
         <VisibilityToggle /> */}
       </div>
