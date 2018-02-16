@@ -17,7 +17,13 @@ class Options extends Component {
             <div>
                 <button onClick={this.handleRemoveAll}>Remove All</button>
                 {
-                    this.props.options.map((option) => <Option key={option} optionText={option} />)
+                    this.props.options.map((option) => (
+                        <Option 
+                            key={option} 
+                            optionText={option}
+                            handleDeleteOption={this.props.handleDeleteOption} 
+                        />
+                    ))
                 }
             </div>
         );
