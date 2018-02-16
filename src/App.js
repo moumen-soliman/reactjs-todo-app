@@ -3,12 +3,12 @@ import './App.css';
 
 //Components
 import Header from './components/main/header.js'
-import Counter from './components/main/counter.js'
+// import Counter from './components/main/counter.js'
 import Action from './components/actions/action.js'
 // import Option from './components/options/option.js'
 import Options from './components/options/options.js'
 import AddOption from './components/options/addoptions.js'
-import VisibilityToggle from './components/main/visibilitytoggle.js'
+// import VisibilityToggle from './components/main/visibilitytoggle.js'
 
 class App extends Component {
   constructor(props) {
@@ -62,8 +62,8 @@ class App extends Component {
         <AddOption 
           handleAddOption={this.handleAddOption}
         />
-        <Counter />
-        <VisibilityToggle />
+        {/* <Counter />
+        <VisibilityToggle /> */}
       </div>
     );
   }
