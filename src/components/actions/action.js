@@ -3,8 +3,8 @@ import React from 'react';
 const Action = (props) => (
   <div>
     <button 
-      onClick={this.handlePick}
-      disabled={!this.props.hasOptions} >
+      onClick={props.handlePick}
+      disabled={!props.hasOptions} >
       What Should I do?
     </button>
   </div>

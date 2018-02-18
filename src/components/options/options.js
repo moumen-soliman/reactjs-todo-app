@@ -10,7 +10,7 @@ const Options = (props) => (
                 <Option 
                     key={option} 
                     optionText={option}
-                    handleDeleteOption={this.props.handleDeleteOption} 
+                    handleDeleteOption={props.handleDeleteOption} 
                 />
             ))
         }
