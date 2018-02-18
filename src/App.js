@@ -8,14 +8,19 @@ import Action from './components/actions/action.js'
 // import Option from './components/options/option.js'
 import Options from './components/options/options.js'
 import AddOption from './components/options/addoptions.js'
+import OptionModal from './components/options/OptionModal.js'
 // import VisibilityToggle from './components/main/visibilitytoggle.js'
 
 class App extends Component {
   state = {
-    options: []
+    options: [],
+    selectedOption: undefined
   };
   handleDeleteOptions = () => {
     this.setState(() => ({ options: [] }));
+  }
+  handleClearSelectedOption = () => {
+    this.setState(() => ({ selectedOption: undefined }))
   }
   handleDeleteOption = (optionToRemove) => {
     this.setState((prevState) => ({
@@ -25,7 +30,7 @@ class App extends Component {
   handlePick = () => {
     const randomNum = Math.floor(Math.random() * this.state.options.length);
     const option = this.state.options[randomNum];
-    alert(option);
+    this.setState(() => ({ selectedOption: option }));
   }
   handleAddOption = (option) => {
     if (!option) {
@@ -81,6 +86,10 @@ class App extends Component {
           />
           <AddOption 
             handleAddOption={this.handleAddOption}
+          />
+          <OptionModal 
+            selectedOption={this.state.selectedOption}
+            handleClearSelectedOption={this.handleClearSelectedOption}
           />
         </div>
         {/* <Counter />
