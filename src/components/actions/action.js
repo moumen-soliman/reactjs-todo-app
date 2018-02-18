@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
-class Action extends Component {
-    render() {
+const Action = (props) => {
       return (
         <div>
           <button 
@@ -11,7 +10,6 @@ class Action extends Component {
           </button>
         </div>
       );
-    }
 }
 
 export default Action;

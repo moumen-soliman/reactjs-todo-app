@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Option extends Component {
-    render() {
+const Option = (props) => {
         return (
             <div>
                 {this.props.optionText}
@@ -14,7 +13,6 @@ class Option extends Component {
                 </button>
             </div>
         );
-    }
 }
 
 export default Option;
