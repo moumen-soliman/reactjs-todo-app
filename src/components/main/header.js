@@ -1,13 +1,11 @@
 import React from 'react';
 
-const Header = (props) => {
-      return (
-        <div>
-          <h1>{this.props.title}</h1>
-          <h2>{this.props.subtitle}</h2>
-        </div>
-      )
-}
+const Header = (props) => (
+  <div>
+    <h1>{this.props.title}</h1>
+    <h2>{this.props.subtitle}</h2>
+  </div>
+)
 
 Header.defaultProps = {
   title: 'To Do Application by ReactJS',
