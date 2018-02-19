@@ -1,9 +1,7 @@
 {
-  "name": "To Do Application",
-  "version": "0.1.0",
-  "main": "index.js",
+  "name": "to-do-application",
+  "version": "1.0.0",
   "author": "Moumen Soliman",
-  "license": "MIT",
   "private": true,
   "dependencies": {
     "babel-cli": "6.24.1",
@@ -14,7 +12,7 @@
     "babel-preset-react": "6.24.1",
     "css-loader": "^0.28.4",
     "node-sass": "^4.5.3",
-    "normalize": "^0.3.1",
+    "normalize.css": "^8.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-modal": "^2.2.2",
