@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
-
 //Components
 import Header from './components/main/header.js'
 // import Counter from './components/main/counter.js'
